@@ -1,0 +1,7 @@
+FROM python:3.6
+ADD spam.py ,.
+ADD rules.py ,.
+ADD . /spam-python
+RUN pip install snorkel matplotlib
+WORKDIR /spam-python
+CMD ["python","./spam.py"]
